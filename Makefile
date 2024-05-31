@@ -15,11 +15,13 @@ TEST_NAME		=	test_main
 # --------------- FILES --------------- #
 
 LIST_SRC	=	ft_strlen.s		\
-				ft_strcpy.s
+				ft_strcpy.s		\
+				ft_strcmp.s
 
 TEST_SRC	=	main.c				\
 				ft_strlen_test.c	\
-				ft_strcpy_test.c
+				ft_strcpy_test.c	\
+				ft_strcmp_test.c
 
 # ------------ DIRECTORIES ------------ #
 

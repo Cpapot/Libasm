@@ -1,6 +1,3 @@
-section .data
-    hello db "Hello, World!", 0
-
 section .text
 	global ft_strcpy
 
@@ -14,7 +11,7 @@ ft_strcpy: ; rdi (1er param), rsi (2eme param)
 		CMP al, 0					; on compare al avec 0
 		JE END_WHILESTR				; JAE (Jump if equal)
 
-		mov BYTE[rdi+rcx*1], al
+		mov BYTE[rdi+rcx*1], al		; on deplace le char de la src dans la dest
 
 		INC rcx						; on incrémente rcx
 		JMP WHILESTR				; on jump au debut de la boucle

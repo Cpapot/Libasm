@@ -17,8 +17,8 @@ void	ft_strlen_unit_test(char *str)
 	size_t ft_strlen_res;
 	size_t strlen_res;
 
-	ft_strlen_res = ft_strlen(str);
 	strlen_res = strlen(str);
+	ft_strlen_res = ft_strlen(str);
 	printf("%s : (ft_strlen: %ld, strlen: %ld) \n",	\
 			 is_strlen_test_valid(ft_strlen_res, strlen_res), ft_strlen_res, strlen_res);
 }

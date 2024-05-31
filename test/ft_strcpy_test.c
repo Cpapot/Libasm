@@ -27,8 +27,8 @@ void	ft_strcpy_unit_test(char *str)
 
 	bzero(&ft_strcpy_dest, sizeof(ft_strcpy_dest));
 	bzero(&strcpy_dest, sizeof(strcpy_dest));
-	ft_strcpy_res = ft_strcpy(ft_strcpy_dest, str);
 	strcpy_res = strcpy(strcpy_dest, str);
+	ft_strcpy_res = ft_strcpy(ft_strcpy_dest, str);
 	//printf("%s", strcpy_dest);
 	if (strlen(str) >= 100)
 		printf("%s : too long to print \n",	\
