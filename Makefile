@@ -17,8 +17,9 @@ TEST_NAME		=	test_main
 LIST_SRC	=	ft_strlen.s		\
 				ft_strcpy.s
 
-TEST_SRC	=	main.c		\
-				ft_strlen_test.c
+TEST_SRC	=	main.c				\
+				ft_strlen_test.c	\
+				ft_strcpy_test.c
 
 # ------------ DIRECTORIES ------------ #
 

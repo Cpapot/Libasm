@@ -4,11 +4,21 @@ section .data
 section .text
 	global ft_strcpy
 
-ft_strcpy:
-    ; Write "Hello, World!" to stdout
-    mov rax, 1          ; syscall number for sys_write
-    mov rdi, 1          ; file descriptor 1 (stdout)
-    mov rsi, hello      ; pointer to the message
-    mov rdx, 13         ; length of the message
-    syscall             ; invoke the system call
-	ret					;
+ft_strcpy: ; rdi (1er param), rsi (2eme param)
+	mov rcx, 0						; on utilisera rcx comme index que l'on met a 0
+
+
+	WHILESTR:
+		mov al, BYTE[rsi+rcx*1]		; on met le char a l'index rcx dans al
+
+		CMP al, 0					; on compare al avec 0
+		JE END_WHILESTR				; JAE (Jump if equal)
+
+		mov BYTE[rdi+rcx*1], al
+
+		INC rcx						; on incrémente rcx
+		JMP WHILESTR				; on jump au debut de la boucle
+	END_WHILESTR:
+
+	mov rax, rdi					; place rdi (la dest) dans rax
+	ret								; retourne rax

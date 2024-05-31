@@ -2,9 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include "../inc/libasm.h"
-# define BUFFSIZE 1000000
+# define BUFFSIZE 100000
 
-char	*is_test_valid(size_t first, size_t second)
+char	*is_strlen_test_valid(size_t first, size_t second)
 {
 	if (first == second)
 		return("✅");
@@ -20,7 +20,7 @@ void	ft_strlen_unit_test(char *str)
 	ft_strlen_res = ft_strlen(str);
 	strlen_res = strlen(str);
 	printf("%s : (ft_strlen: %ld, strlen: %ld) \n",	\
-			 is_test_valid(ft_strlen_res, strlen_res), ft_strlen_res, strlen_res);
+			 is_strlen_test_valid(ft_strlen_res, strlen_res), ft_strlen_res, strlen_res);
 }
 
 void	ft_strlen_test(void)
@@ -28,6 +28,7 @@ void	ft_strlen_test(void)
 	char	testBUFF[BUFFSIZE];
 	size_t	i;
 
+	printf("\n		ft_strlen tests:		\n");
 	i = 0;
 	sprintf(testBUFF, "bonjour");
 	ft_strlen_unit_test(testBUFF);
@@ -46,4 +47,5 @@ void	ft_strlen_test(void)
 	//cause memory leak but work
 	//testBUFF[i] = 'a';
 	//ft_strlen_unit_test(testBUFF);
+	printf("\n");
 }
