@@ -2,9 +2,9 @@ section .data
     hello db "Hello, World!", 0
 
 section .text
-    global print_hello
+	global ft_strcpy
 
-print_hello:
+ft_strcpy:
     ; Write "Hello, World!" to stdout
     mov rax, 1          ; syscall number for sys_write
     mov rdi, 1          ; file descriptor 1 (stdout)
