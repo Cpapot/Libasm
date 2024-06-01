@@ -9,16 +9,16 @@ ft_strcmp: ; rdi (1er param), rsi (2eme param)
 		mov al, BYTE[rdi+rcx*1]		; on met le char de s1 a l'index rcx dans al
 		mov bl, BYTE[rsi+rcx*1]		; on met le char de s2 a l'index rcx dans al
 
-		CMP al, 0					; on compare al avec 0
-		JE END_WHILESTR				; JE (Jump if equal)
-		CMP bl, 0					; on compare bl avec 0
-		JE END_WHILESTR				; JE (Jump if equal)
+		cmp al, 0					; on compare al avec 0
+		je END_WHILESTR				; JE (Jump if equal)
+		cmp bl, 0					; on compare bl avec 0
+		je END_WHILESTR				; JE (Jump if equal)
 
-		CMP bl, al					; on compare s1[i] avec s2[i]
-		JNE END_WHILESTR			; JNE (Jump if not equal)
+		cmp bl, al					; on compare s1[i] avec s2[i]
+		jne END_WHILESTR			; JNE (Jump if not equal)
 
-		INC rcx						; on incrémente rcx
-		JMP WHILESTR				; on jump au debut de la boucle
+		inc rcx						; on incrémente rcx
+		jmp WHILESTR				; on jump au debut de la boucle
 	END_WHILESTR:
 
 	sub al, bl						; s1[i] - s2[i]

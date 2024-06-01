@@ -16,7 +16,8 @@ TEST_NAME		=	test_main
 
 LIST_SRC	=	ft_strlen.s		\
 				ft_strcpy.s		\
-				ft_strcmp.s
+				ft_strcmp.s		\
+				ft_write.s
 
 TEST_SRC	=	main.c				\
 				ft_strlen_test.c	\
@@ -76,7 +77,7 @@ re:		fclean
 			$(MAKE) all
 
 test:	all
-		$(GCC) -o $(TEST_NAME) $(TEST) -L. -lasm
+		$(GCC) -o $(TEST_NAME) $(TEST) -L. -lasm -lc
 
 
 .PHONY: all, clean, fclean, re, test

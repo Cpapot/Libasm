@@ -7,12 +7,12 @@ ft_strlen: ; rdi (1er param)
 	WHILESTR:
 		mov al, BYTE[rdi+rcx*1]		; on met le char a l'index rcx dans al
 
-		CMP al, 0					; on compare al avec 0
-		JE END_WHILESTR				; JAE (Jump if equal)
+		cmp al, 0					; on compare al avec 0
+		je END_WHILESTR				; JAE (Jump if equal)
 
 
-		INC rcx						; on incrémente rcx
-		JMP WHILESTR				; on jump au debut de la boucle
+		inc rcx						; on incrémente rcx
+		jmp WHILESTR				; on jump au debut de la boucle
 	END_WHILESTR:
 
 	mov rax, rcx					; place rcx dans rax
