@@ -11,18 +11,22 @@ DEFAULT			=	\033[0m
 SUPPR			=	\r\033[2K
 NAME			=	libasm.a
 TEST_NAME		=	test_main
+TEST_FILE		=	.testfile
 
 # --------------- FILES --------------- #
 
 LIST_SRC	=	ft_strlen.s		\
 				ft_strcpy.s		\
 				ft_strcmp.s		\
-				ft_write.s
+				ft_write.s		\
+				ft_read.s
 
 TEST_SRC	=	main.c				\
 				ft_strlen_test.c	\
 				ft_strcpy_test.c	\
-				ft_strcmp_test.c
+				ft_strcmp_test.c	\
+				ft_write_test.c		\
+				ft_read_test.c
 
 # ------------ DIRECTORIES ------------ #
 
@@ -42,9 +46,7 @@ NASM			=		nasm -f elf64
 
 AR				=		ar rcs
 
-LD				=		ld
-
-GCC				=		gcc -g -fsanitize=address
+GCC				=		gcc -Wall -Wextra -Werror -g -fsanitize=address
 
 # -------------  COMMANDS ------------- #
 
@@ -69,6 +71,7 @@ $(DIR_BUILD)%.o: %.s
 clean:
 			$(RM) $(DIR_BUILD)
 			$(RM) $(TEST_NAME)
+			$(RM) $(TEST_FILE)
 
 fclean:	clean
 			$(RM) $(NAME)
@@ -77,7 +80,7 @@ re:		fclean
 			$(MAKE) all
 
 test:	all
-		$(GCC) -o $(TEST_NAME) $(TEST) -L. -lasm -lc
+		$(GCC) -o $(TEST_NAME) $(TEST) -L. -lasm
 
 
 .PHONY: all, clean, fclean, re, test

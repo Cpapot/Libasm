@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include "../inc/libasm.h"
-# define BUFFSIZE 100000
 
 char	*is_strlen_test_valid(size_t first, size_t second)
 {

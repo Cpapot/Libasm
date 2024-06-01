@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include "../inc/libasm.h"
-# define BUFFSIZE 100000
 
 char	*is_strcpy_test_valid(char *ft_strcpy_res, char *strcpy_res, char *ft_strcpy_dest, char *strcpy_dest)
 {

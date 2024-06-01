@@ -1,9 +1,9 @@
 section .text
-	global ft_write
+	global ft_read
 	extern __errno_location
 
-ft_write: ; rdi (1er param), rsi (2eme param), rdx(3eme param)
-	mov rax, 1							; on set rax a 1 (correspond a write)
+ft_read: ; rdi (1er param), rsi (2eme param), rdx(3eme param)
+	mov rax, 0							; on set rax a 0 (correspond a read)
 	syscall								; on execute write
 
 	cmp rax, 0							; on check le retour du syscall

@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include "../inc/libasm.h"
-# define BUFFSIZE 50000
 
 char	*is_strcmp_test_valid(int first, int second)
 {
