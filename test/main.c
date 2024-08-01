@@ -35,5 +35,10 @@ int		main(int argc, char **argv)
 		errno = 0;
 		ft_read_test();
 	}
+	if (argc == 1 || !strcmp("ft_strcpy", argv[1]))
+	{
+		printf("%s", ft_strdup("salut ceci est un test"));
+	}
+
 
 }

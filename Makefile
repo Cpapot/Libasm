@@ -19,7 +19,8 @@ LIST_SRC	=	ft_strlen.s		\
 				ft_strcpy.s		\
 				ft_strcmp.s		\
 				ft_write.s		\
-				ft_read.s
+				ft_read.s		\
+				ft_strdup.s
 
 TEST_SRC	=	main.c				\
 				ft_strlen_test.c	\
