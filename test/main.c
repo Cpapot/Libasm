@@ -12,7 +12,7 @@ void	ft_strlen_test(void);
 void	ft_strcpy_test(void);
 void	ft_strcmp_test(void);
 void	ft_write_test(int test_file_fd);
-void	ft_read_test(int test_file_fd);
+void	ft_read_test();
 
 int		main(int argc, char **argv)
 {
@@ -33,9 +33,7 @@ int		main(int argc, char **argv)
 	if (argc == 1 || !strcmp("ft_read", argv[1]))
 	{
 		errno = 0;
-		int test_fd = open("testfile.txt", O_RDONLY | O_APPEND);
-		ft_read_test(test_fd);
-		close(test_fd);
+		ft_read_test();
 	}
 
 }

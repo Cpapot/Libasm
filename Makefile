@@ -46,8 +46,7 @@ NASM			=		nasm -f elf64
 
 AR				=		ar rcs
 
-GCC				=		gcc -Wall -Wextra -Werror -g -fsanitize=address
-
+GCC				=		gcc -Wall -Wextra -Werror -g
 # -------------  COMMANDS ------------- #
 
 RM				=		rm -rf
