@@ -47,7 +47,7 @@ NASM			=		nasm -f elf64
 
 AR				=		ar rcs
 
-GCC				=		gcc -Wall -Wextra -Werror -g
+GCC				=		gcc -Wall -Wextra -Werror -g -static
 # -------------  COMMANDS ------------- #
 
 RM				=		rm -rf

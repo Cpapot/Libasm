@@ -35,10 +35,11 @@ int		main(int argc, char **argv)
 		errno = 0;
 		ft_read_test();
 	}
-	if (argc == 1 || !strcmp("ft_strcpy", argv[1]))
+	if (argc == 1 || !strcmp("ft_strdup", argv[1]))
 	{
-		printf("%s", ft_strdup("salut ceci est un test"));
+		char *str = "Hello, World!";
+		char *str1 = ft_strdup(str);
+		printf("str: %s\nstr1: %s\n", str, str1);
+		free(str1);
 	}
-
-
 }

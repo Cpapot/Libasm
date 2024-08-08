@@ -1,6 +1,7 @@
 #ifndef LIBASM_H
 # define LIBASM_H
 
+# include <stdlib.h>
 # include <unistd.h>
 # include <errno.h>
 
