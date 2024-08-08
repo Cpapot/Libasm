@@ -19,14 +19,11 @@ ft_strdup:	;
 	END_WHILESTR:
 	inc	rax							;
 
-	mov rax, 4						;
-	imul rax, rcx					;
-
 	mov rdi, rax					;
 	call malloc						;
 
 	cmp rax, 0						;
-	js catch_error					; si malloc NULL on set le errno et on return null
+	jz catch_error					; si malloc NULL on set le errno et on return null
 
 	mov rcx, 0						; on met l'index a 0
 	WHILESTRCPY:
