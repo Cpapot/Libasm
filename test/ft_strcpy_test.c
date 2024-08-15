@@ -59,8 +59,5 @@ void	ft_strcpy_test(void)
 		i++;
 	}
 	ft_strcpy_unit_test(testBUFF);
-	//cause memory leak but work
-	//testBUFF[i] = 'a';
-	//ft_strcpy_unit_test(testBUFF);
 	printf("\n");
 }

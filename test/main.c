@@ -12,12 +12,11 @@ void	ft_strlen_test(void);
 void	ft_strcpy_test(void);
 void	ft_strcmp_test(void);
 void	ft_write_test(int test_file_fd);
+void	ft_strdup_test();
 void	ft_read_test();
 
 int		main(int argc, char **argv)
 {
-	remove("testfile.txt");
-
 	if (argc == 1 || !strcmp("ft_strlen", argv[1]))
 		ft_strlen_test();
 	if (argc == 1 || !strcmp("ft_strcpy", argv[1]))
@@ -37,9 +36,7 @@ int		main(int argc, char **argv)
 	}
 	if (argc == 1 || !strcmp("ft_strdup", argv[1]))
 	{
-		char *str = "Hello, World!";
-		char *str1 = ft_strdup(str);
-		printf("str: %s\nstr1: %s\n", str, str1);
-		free(str1);
+		ft_strdup_test();
 	}
+	remove("testfile.txt");
 }

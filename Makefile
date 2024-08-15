@@ -27,7 +27,8 @@ TEST_SRC	=	main.c				\
 				ft_strcpy_test.c	\
 				ft_strcmp_test.c	\
 				ft_write_test.c		\
-				ft_read_test.c
+				ft_read_test.c		\
+				ft_strdup_test.c
 
 # ------------ DIRECTORIES ------------ #
 

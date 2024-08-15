@@ -29,6 +29,7 @@ void	ft_strlen_test(void)
 
 	printf("\n		ft_strlen tests:		\n");
 	i = 0;
+	strcpy(testBUFF, "bonjour");
 	sprintf(testBUFF, "bonjour");
 	ft_strlen_unit_test(testBUFF);
 	sprintf(testBUFF, "string un plus longue");
@@ -43,8 +44,5 @@ void	ft_strlen_test(void)
 		i++;
 	}
 	ft_strlen_unit_test(testBUFF);
-	//cause memory leak but work
-	//testBUFF[i] = 'a';
-	//ft_strlen_unit_test(testBUFF);
 	printf("\n");
 }
